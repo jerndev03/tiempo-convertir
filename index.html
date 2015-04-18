@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta type="charset" content="utf-8">
+	<title>Tiempo Covertir</title>
+	<link rel="stylesheet" type="style/css" href="extensions/style.css">
+
+</head>
+<body>
+	<section>
+	<h1>Tiempo Covertir</h1>
+	<form method="POST">
+		<p>Converting 
+		<input type="text" id="convertNumberOne" oninput="x()" placeholder="0.00"> 
+		<select id="unitNumberOne" onchange="x()">
+		<option value="hrs">Hours</option>
+		<option value="min">Minutes</option>
+		<option value="sec">Seconds</option>
+		<option value="msec">Miliseconds</option>
+		</select> <span id="errMsg" class="errMsg"></span>
+		to		
+		<select id="unitNumberTwo" onchange="x()">
+		<option value="hrs">Hours</option>
+		<option value="min">Minutes</option>
+		<option value="sec">Seconds</option>
+		<option value="msec">Miliseconds</option>
+		</select></p>
+		<p>
+		RESULT = 
+		<input type="text" id="convertNumberTwo" placeholder="0.00" readonly></p>
+	<script src="extensions/behave.js"></script>
+	</form>
+	</section>
+
+	<noscript>
+			<p>Java script needs to be enabled to use this program correctly! </p>
+	</noscript>
+</body>
+</html>

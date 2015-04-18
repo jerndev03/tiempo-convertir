@@ -1,4 +1,4 @@
-# tiempo-convertir
+# tiempo-convertir created by jerndev03
 Just a trivial program for a time converter
 
 This is my first GitHub project..
