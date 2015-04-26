@@ -1,38 +1,62 @@
 <html>
 <head>
 	<meta type="charset" content="utf-8">
-	<title>Tiempo Covertir</title>
+	<title>Tiempo Covertir by jerndev03</title>
 	<link rel="stylesheet" type="style/css" href="extensions/style.css">
-
 </head>
-<body>
+<body onload="iniLoad()">
+	<script src="extensions/behave.js"></script>
+	<script src="extensions/initialLoad.js"></script>	
+	<header>
+	<h1></h1>
+		<nav>
+			<ul>
+				<li><a href="#" target="_blank">About</a> | </li>
+				<li><a href="#" target="_blank">Read Me</a> | </li>
+				<li><a href="UPDATE.md" target="_blank">Revision</a> | </li>
+				<li><a href="#" target="_blank">Link</a></li>
+			</ul>
+		</nav>
+	</header>
 	<section>
 	<h1>Tiempo Covertir</h1>
+	<hr>
 	<form method="POST">
-		<p>Converting 
-		<input type="text" id="convertNumberOne" oninput="x()" placeholder="0.00"> 
-		<select id="unitNumberOne" onchange="x()">
+		<p><span id="errMsg" class="errMsg"></span></p>
+		<p><label>Value: </label>
+		<input type="text" id="convertNumberOne" oninput="convertMe()" /> 
+		</p>
+		<p><label>
+		<select id="unitNumberOne" onchange="convertMe()">
+		<option value="hrs">Hours (hr)</option>
+		<option value="min">Minutes (min)</option>
+		<option value="sec">Seconds (s)</option>
+		<option value="msec">Miliseconds (ms)</option>
+		<option value="usec">Microseconds (&#956;s)</option>
+		<option value="nsec">Nanoseconds (ns)</option>
+		</select> 
+		to </label>
+		<select id="unitNumberTwo" onchange="convertMe()">
 		<option value="hrs">Hours</option>
 		<option value="min">Minutes</option>
 		<option value="sec">Seconds</option>
 		<option value="msec">Miliseconds</option>
-		</select> <span id="errMsg" class="errMsg"></span>
-		to		
-		<select id="unitNumberTwo" onchange="x()">
-		<option value="hrs">Hours</option>
-		<option value="min">Minutes</option>
-		<option value="sec">Seconds</option>
-		<option value="msec">Miliseconds</option>
+		<option value="usec">Microseconds (&#956;s)</option>
+		<option value="nsec">Nanoseconds (ns)</option>
 		</select></p>
 		<p>
-		RESULT = 
-		<input type="text" id="convertNumberTwo" placeholder="0.00" readonly></p>
-	<script src="extensions/behave.js"></script>
+		<label>Result:</label> 
+		<input type="text" id="convertNumberTwo" readonly/></p>
 	</form>
 	</section>
 
 	<noscript>
 			<p>Java script needs to be enabled to use this program correctly! </p>
 	</noscript>
+	<footer>
+		<hr>
+		<small id="showCopyRight"></small>
+		<script src="extensions/footer.js"></script>
+	</footer>
 </body>
 </html>
